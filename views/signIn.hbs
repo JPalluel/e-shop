@@ -1,0 +1,33 @@
+{{>header}}
+
+
+<h3 style = "color: red"> {{errorMessage}}</h3>
+<form class="needs-validation" novalidate method="POST" action="/signIn">
+    <div class="mb-3">
+        <label for="username">Username *</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="userName" placeholder="" name ="userName" required>
+            <div class="invalid-feedback" style="width: 100%;"> a username is required. </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="password">Password*</label>
+        <input type="password" class="form-control" id="password" placeholder="" name="password">
+        <div class="invalid-feedback"> Wrong Credentials. </div>
+    </div>
+</div>
+<hr class="mb-1"> 
+<div class="submit-button text-center">
+    <button class="btn hvr-hover" id="submit" type="submit">Sign In</button>
+    <div id="msgSubmit" class="h3 text-center hidden"></div>
+    <div class="clearfix"></div>
+</div>
+</form>
+
+
+
+
+
+
+
+{{>footer}}
